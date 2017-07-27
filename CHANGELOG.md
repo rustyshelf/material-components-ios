@@ -1,5 +1,25 @@
 # release-candidate TODO: Replace me with version number. 
 
+## API Diffs
+
+### Collections
+
+* Added collection view styling delegate methods to allow optional hiding of cell separators.
+
+### MaskedTransitioning
+
+* New component that makes it easy to animate between two view controllers using an expanding mask effect.
+
+### TextFields
+
+* Added leadingView to MDCTextField
+* Renamed MDCTextFieldPositioningDelegate 'textContainerInset:' to 'textInsets:'
+* Added enabled, textInsets, trailingView to MDCTextInput.
+
+### Typography
+
+* Changed nullability of 'lightFontOfSize:', 'mediumFontOfSize:', 'boldItalicFontOfSize:' from nonnull to nullable.
+
 # 29.0.0
 
 * Reverts changes to the title color of MDCFlatButton and MDCRaisedButton.
