@@ -72,11 +72,11 @@
 /** A Boolean value indicating whether the text field is currently in edit mode. */
 @property(nonatomic, assign, readonly, getter=isEditing) BOOL editing;
 
-/** 
+/**
  A Boolean value indicating whether the input is enabled.
- 
+
  The main use of this is to change the appearance when isEnabled = NO to look 'disabled'.
- 
+
  Some inputs will inherit this from UIControl.
  */
 @property(nonatomic, assign, getter=isEnabled) BOOL enabled;
