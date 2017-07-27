@@ -14,6 +14,7 @@ PODS:
     - MaterialComponents/FlexibleHeader (= 29.0.0)
     - MaterialComponents/HeaderStackView (= 29.0.0)
     - MaterialComponents/Ink (= 29.0.0)
+    - MaterialComponents/MaskedTransition (= 29.0.0)
     - MaterialComponents/NavigationBar (= 29.0.0)
     - MaterialComponents/OverlayWindow (= 29.0.0)
     - MaterialComponents/PageControl (= 29.0.0)
@@ -177,6 +178,10 @@ PODS:
     - MaterialComponents/Ink/Component
     - MaterialComponents/Themes
   - MaterialComponents/Ink/Component (29.0.0)
+  - MaterialComponents/MaskedTransition (29.0.0):
+    - MotionAnimator (~> 1.0)
+    - MotionInterchange (~> 1.0)
+    - MotionTransitioning (~> 3.0)
   - MaterialComponents/NavigationBar (29.0.0):
     - MaterialComponents/NavigationBar/ColorThemer (= 29.0.0)
     - MaterialComponents/NavigationBar/Component (= 29.0.0)
@@ -283,6 +288,12 @@ PODS:
     - MaterialComponents/private/RTL
     - MaterialComponents/Typography
   - MaterialComponents/TextFields (29.0.0):
+    - MaterialComponents/TextFields/ColorThemer (= 29.0.0)
+    - MaterialComponents/TextFields/Component (= 29.0.0)
+  - MaterialComponents/TextFields/ColorThemer (29.0.0):
+    - MaterialComponents/TextFields/Component
+    - MaterialComponents/Themes
+  - MaterialComponents/TextFields/Component (29.0.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Palettes
     - MaterialComponents/private/Math
@@ -292,17 +303,24 @@ PODS:
   - MaterialComponents/Typography (29.0.0):
     - MaterialComponents/private/Application
   - MDFTextAccessibility (1.2.0)
+  - MotionAnimator (1.1.0):
+    - MotionInterchange
+  - MotionInterchange (1.0.1)
+  - MotionTransitioning (3.0.1)
 
 DEPENDENCIES:
   - MaterialComponents (from `../../`)
 
 EXTERNAL SOURCES:
   MaterialComponents:
-    :path: ../../
+    :path: "../../"
 
 SPEC CHECKSUMS:
-  MaterialComponents: d0ae7d9b517a72608caaa609682fe2de41921ba0
+  MaterialComponents: c94e447bae0e4ea87af76450019ba1ba441ec11f
   MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
+  MotionAnimator: 9d025cda7572737e5db5ca779eb28c767fe6cf45
+  MotionInterchange: 7a7c355ba2ed5d36c5cf2ceb76cacd3d3680dbf5
+  MotionTransitioning: a8b09749a075e420a599324fdf628465e8b1b219
 
 PODFILE CHECKSUM: 8c6ad4fe8e5aa667e06c9b43f3f5d4d6430b1322
 

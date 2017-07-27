@@ -118,12 +118,12 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   MaterialComponents:
-    :path: ../../
+    :path: "../../"
   RemoteImageServiceForMDCDemos:
-    :path: ../supplemental
+    :path: "../supplemental"
 
 SPEC CHECKSUMS:
-  MaterialComponents: d0ae7d9b517a72608caaa609682fe2de41921ba0
+  MaterialComponents: c94e447bae0e4ea87af76450019ba1ba441ec11f
   MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
   RemoteImageServiceForMDCDemos: 56d5543fb64c2a9fcb8e6dcffc0b91c9ff626455
 

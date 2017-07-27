@@ -8,10 +8,10 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   MaterialComponents:
-    :path: ../../
+    :path: "../../"
 
 SPEC CHECKSUMS:
-  MaterialComponents: d0ae7d9b517a72608caaa609682fe2de41921ba0
+  MaterialComponents: c94e447bae0e4ea87af76450019ba1ba441ec11f
 
 PODFILE CHECKSUM: 238ed9ba58d5e4a3638e6cea92b00109641989f8
 
