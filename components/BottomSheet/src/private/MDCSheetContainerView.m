@@ -37,6 +37,7 @@ static const CGFloat kSheetBounceBuffer = 150;
 @property(nonatomic) BOOL isDragging;
 @property(nonatomic) CGFloat originalPreferredSheetHeight;
 @property(nonatomic) CGRect previousAnimatedBounds;
+@property(nonatomic) BOOL allowDragToClose;
 
 @end
 
@@ -75,6 +76,8 @@ static const CGFloat kSheetBounceBuffer = 150;
     [self addSubview:_sheet];
 
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self];
+      
+    _allowDragToClose = YES;
 
     [scrollView addObserver:self
                  forKeyPath:kContentSizeKey
@@ -113,6 +116,13 @@ static const CGFloat kSheetBounceBuffer = 150;
 - (void)dealloc {
   [self.sheet.scrollView removeObserver:self forKeyPath:kContentSizeKey];
   [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)enableDragToDismiss {
+  _allowDragToClose = YES;
+}
+- (void)disableDragToDismiss {
+  _allowDragToClose = NO;
 }
 
 - (void)voiceOverStatusDidChange {
@@ -336,6 +346,8 @@ static const CGFloat kSheetBounceBuffer = 150;
 - (BOOL)draggableView:(__unused MDCDraggableView *)view
     shouldBeginDraggingWithVelocity:(CGPoint)velocity {
   [self updateSheetState];
+    
+  if (_allowDragToClose == NO) return NO;
 
   switch (self.sheetState) {
     case MDCSheetStatePreferred:
